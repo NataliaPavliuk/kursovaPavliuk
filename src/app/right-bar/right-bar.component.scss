@@ -1,0 +1,77 @@
+@use "@material/list";
+
+@include list.core-styles;
+
+.align-right {
+    background: #e6e7e8;
+    width: 225px;
+    float: right;
+    height: calc(100vh);
+    top: 82px;
+    margin-top: -18px;
+    position: fixed;
+    right: 0px;
+}
+
+span.mdc-list-item__text {
+    margin-left: 0px;
+}
+
+h3.mdc-list-group__subheader {
+    font-family: 'Lato';
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.message {
+    width: 100%;
+    display: flex;
+    color: black;
+    font-family: 'Lato';
+    margin-right: 15px;
+}
+
+.user-online::after {
+    content: ' \25CF';
+    font-size: 14px;
+    float: right;
+    color: #10c469;
+    margin: auto 0 auto auto;
+}
+
+.message .author-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 11px;
+    border-radius: 50%;
+}
+
+.message div .author-name {
+    margin-bottom: 0px;
+    font-size: 13px;
+    line-height: 8px;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.message div .online, .message div .message-text {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1190px) {
+    .align-right {
+        padding-top: 1px;
+        background: #e6e7e8;
+        width: auto;
+        float: unset;
+        height: auto;
+        top: 0px;
+        margin-top: 0px;
+        position: relative;
+        right: 0px;
+        padding-bottom: 20px;
+    }
+    h3.mdc-list-group__subheader {
+        text-align: center;
+    }
+}

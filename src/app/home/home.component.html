@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shrine (MDC Web Example App)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Playball|Open+Sans+Condensed:300,700" />
+  </head>
+
+  <body>
+    
+    <app-app-bar></app-app-bar>
+
+    <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
+      <div class="mdc-drawer__content">
+        
+        <app-menu></app-menu>
+
+      </div>
+    </aside>
+  
+    <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+      <main class="main-content" id="main-content" style="background-color: #edf0f5;">
+        <div>
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell">
+                <div class="mdc-card mdc-card-blue">
+                  <div class="mdc-card__primary-action">
+                    <div class="mdc-card__media mdc-card__media--square">
+                      <div class="mdc-card__media-content">USER STATUS</div>
+                      <div class="count-cart">
+                        <span class="title">{{UserStatus}}</span>
+                        <span class="sub-title">This Week</span>
+                      </div>
+                      <div class="progress">
+                          <div class="track"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mdc-layout-grid__cell">
+                <div class="mdc-card mdc-card-red">
+                  <div class="mdc-card__primary-action">
+                    <div class="mdc-card__media mdc-card__media--square">
+                      <div class="mdc-card__media-content">SALES</div>
+                      <div class="count-cart">
+                        <span class="title">{{Sales}}</span>
+                        <span class="sub-title">This Month</span>
+                      </div>
+                      <div class="progress">
+                          <div class="track"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mdc-layout-grid__cell">
+                <div class="mdc-card mdc-card-green">
+                  <div class="mdc-card__primary-action">
+                    <div class="mdc-card__media mdc-card__media--square">
+                      <div class="mdc-card__media-content">PAGE VIEWS</div>
+                      <div class="count-cart">
+                        <span class="title">{{PageViews}}</span>
+                        <span class="sub-title">This Month</span>
+                      </div>
+                      <div class="progress">
+                          <div class="track"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell--span-7">
+                <div class="chart-container">
+                  <div style="margin-left: 5px;font-family: 'Lato'; font-weight: 600; font-size: 13px;">VISITORS</div>
+                  <canvas id="line-chart" style="margin-top: 20px; height: 400px !important; width: 100% !important;"></canvas>
+                </div>
+              </div>
+              <div class="mdc-layout-grid__cell--span-5">
+                <div class="status-block events">
+                  <div style="margin-left: 5px;font-family: 'Lato'; font-weight: 600; font-size: 13px;">EVENTS</div>
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item">
+                      <span>be reviews meetup</span>
+                      <div class="count count-green">29</div>
+                    </li>
+                    <li class="mdc-list-item">
+                      <span>Google meetup</span>
+                      <div class="count count-red">25</div>
+                    </li>
+                    <li class="mdc-list-item">
+                      <span  style="color: grey;">No More Event Shedule</span>
+                    </li>
+                  </ul>
+                </div>
+                <app-weather-widget></app-weather-widget>
+              </div>
+            </div>
+          </div>
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell--span-6 status-block">
+                <div class="head">
+                  <div>
+                    <div class="title">TOP 10 STORIES</div>
+                    <div class="sub-title">Best Saller Per Month</div>
+                  </div>
+                  <div style="margin: auto; margin-right: 0px;">
+                    <button>All stories</button>
+                  </div>
+                </div>
+                <div>
+                  <div class="item">
+                    <div>
+                      <span class="number">1.</span>
+                      <span class="title">Iphone 6</span>
+                      <span class="sub-title">195</span>
+                    </div>
+                    <div class="progress">
+                        <div class="track track-blue"></div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div>
+                      <span class="number">2.</span>
+                      <span class="title">IPhone 5</span>
+                      <span class="sub-title">355</span>
+                    </div>
+                    <div class="progress">
+                        <div class="track track-red"></div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div>
+                      <span class="number">3.</span>
+                      <span class="title">IPhone 7</span>
+                      <span class="sub-title">105</span>
+                    </div>
+                    <div class="progress">
+                        <div class="track track-green"></div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="mdc-layout-grid__cell--span-6 status-block">
+                <div class="chart-container">
+                  <div style="margin-left: 5px;font-family: 'Lato'; font-weight: 600; font-size: 13px;">ORDER STATS</div>
+                  <canvas id="doughnut-chart" style="height: 150px !important; margin-top: 20px; margin-left: auto; margin-right: auto;"></canvas>
+                  <div class="doughnut-chart-text">
+                    <span class="title">4,500</span><br>
+                    <span class="sub-title">Delivered</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mdc-layout-grid" style="padding-top: 0px;">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell--span-12 status-block">
+                <div style="margin-left: 5px;font-family: 'Lato'; font-weight: 600; font-size: 13px;">RECENT COMMENTS</div>
+                <ul class="mdc-list recent-comments">
+                  <li class="mdc-list-item">
+                    <div>
+                      <img src="assets/users-image/1.jpg">
+                      <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+                    </div>
+                    <div>
+                      <button class="button button-green">Approved</button>
+                      <div class="date">August 14, 2021</div>
+                    </div>
+                  </li>
+                  <li class="mdc-list-item">
+                    <div>
+                      <img src="assets/users-image/3.jpg">
+                      <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+                    </div>
+                    <div>
+                      <button class="button button-red">Approved</button>
+                      <div class="date">August 14, 2021</div>
+                    </div>
+                  </li>
+                  <li class="mdc-list-item">
+                    <div>
+                      <img src="assets/users-image/5.jpg">
+                      <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+                    </div>
+                    <div>
+                      <button class="button button-green">Approved</button>
+                      <div class="date">August 14, 2021</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <app-right-bar></app-right-bar>
+  </body>
+</html>
