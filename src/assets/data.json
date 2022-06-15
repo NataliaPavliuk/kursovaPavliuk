@@ -1,0 +1,18 @@
+{ 
+  "UserStatus": "5,101",
+  "Sales": "9,181",
+  "PageViews": "91,231",
+  "chart_line": { 
+    "labels" : ["January", "February", "March", "April", "May", "June"],
+    "points" : [50, 37, 51, 50, 75, 73],
+    "stepSize" : 25
+  },
+  "chart_doughnut": { 
+    "labels" : ["Iphone 6", "Iphone 5", "Iphone 7"],
+    "points" : [355, 195, 105],
+    "backgroundColor" : [ "red", "green", "blue" ],
+    "borderColor": [ "white", "white", "white" ],
+    "cutoutPercentage": 75,
+    "pointRadius": 20
+  }
+}
