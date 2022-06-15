@@ -1,0 +1,198 @@
+@use "@material/drawer";
+@use "@material/list";
+@use "@material/list/mdc-list";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
+@include textfield.core-styles;
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
+@include list.core-styles;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.mdc-drawer--dismissible.mdc-drawer--open {
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    padding-top: 0px;
+}
+
+.accordion-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.accordion-menu li.open > ul {
+    display: block;
+}
+.mdc-drawer--dismissible.mdc-drawer--open {
+    position: fixed;
+}
+.accordion-menu li > ul {
+    /* position: absolute; */
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 350ms ease-in-out;
+    margin-left: 25px;
+}
+.accordion-menu ul.is-visible {
+    display: block;
+    /* height: auto; */
+}
+.accordion-menu li {
+    border-bottom: 1px solid rgba(194, 194, 194, 0.333);
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+.accordion-menu li:last-child {
+    border: none;
+}
+.accordion-menu li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.accordion-menu li > a > svg {
+    display: block;
+    position: relative;
+    fill: rgb(48, 48, 48);
+    width: 10px;
+    transform: rotate(270deg);
+    float: right;
+    transition: all .3s ease;
+}
+.accordion-menu li.open > a > svg {
+    transform: rotate(360deg);
+}
+.accordion-menu a {
+    background-color: transparent;
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+.accordion-menu * {
+    box-sizing: border-box;
+}
+i.material-icons.mdc-list-item__graphic {
+    margin: 0px;
+}
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+    width: max-content !important;
+}
+.mdc-drawer .mdc-list-item {
+    border-radius: 0px;
+}
+a:-webkit-any-link:active {
+    color: white;
+}
+span.mdc-list-item__text {
+    width: 100%;
+    margin-left: 14px;
+    font-family: "Lato", sans-serif ;
+    font-weight: 400;
+    font-size: 13px;
+}
+a.mdc-list-item.mdc-list-item {
+    margin: 0px !important;
+}
+a.mdc-list-item {
+    background: none;
+}
+.mdc-drawer__content {
+    background: #414042;
+}
+a.mdc-list-item {
+    color: white !important;
+    font-weight: 300 !important;
+}
+.accordion-menu li > a > svg {
+    width: 12px;
+    margin-right: 5px;
+}
+a.mdc-list-item.mdc-list-item--activated {
+    background: #188ae2;
+}
+i.material-icons.mdc-list-item__graphic {
+    color: white !important;
+    font-size: 21px !important;
+}
+.accordion-menu li {
+    border-bottom: none!important;
+}
+path {
+    fill: white !important;
+}
+span.mdc-list-item__text.item {
+    margin-left: 20px;
+}
+.help-nav {
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 2px solid #323133;
+}
+.mdc-text-field__icon--trailing {
+    padding: 0px !important;
+    font-size: 21px;
+    color: white !important;
+    margin-right: 8px;
+}
+.mdc-text-field--with-leading-icon.mdc-text-field--outlined .mdc-floating-label {
+    left: 16px !important;
+    color: white !important;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+}
+label.mdc-text-field.mdc-text-field--outlined.mdc-text-field--with-leading-icon.mdc-text-field--with-trailing-icon {
+    height: 30px;
+    background-color: #0b76c9 !important;
+    border-radius: 30px;
+    left: 20px;
+}
+span.mdc-notched-outline__trailing {
+    border: none;
+}
+.mdc-text-field--with-trailing-icon.mdc-text-field--outlined :not(.mdc-notched-outline--notched) .mdc-notched-outline__notch {
+    border: none;
+}
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+    display: none;
+}
+.mdc-text-field--outlined .mdc-text-field__input {
+    height: auto;
+}
+.mdc-top-app-bar__row {
+    background: #188ae2;
+}
+section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start {
+    padding: 0px;
+}
+.mdc-top-app-bar__row {
+    height: max-content;
+}
+button.material-icons.mdc-top-app-bar__navigation-icon.mdc-icon-button.mdc-ripple-upgraded--unbounded.mdc-ripple-upgraded {
+    float: right;
+    top: 8px;
+    right: 10px;
+}
+.accordion-menu[_ngcontent-scp-c20] a[_ngcontent-scp-c20] {
+    background-color: transparent !important;
+}
+.accordion-menu[_ngcontent-bsi-c20] a[_ngcontent-bsi-c20] {
+    background-color: transparent;
+}
+
+i.material-icons.mdc-list-item__graphic {
+    margin-right: 10px;
+}
+
+aside.mdc-drawer.mdc-drawer--dismissible.mdc-top-app-bar--fixed-adjust.mdc-drawer--open {
+    width: 257px;
+    border-right: 0px;
+}

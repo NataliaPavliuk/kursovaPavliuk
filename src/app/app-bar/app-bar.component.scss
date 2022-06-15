@@ -1,0 +1,43 @@
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+
+@import '/src/app/home/home.component.scss';
+
+@include icon-button.core-styles;
+
+.author {
+    display: flex;
+    color: white;
+    font-family: 'Lato';
+    margin-right: 15px;
+}
+
+.author .author-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 11px;
+    border-radius: 50%;
+}
+
+.author div .author-name {
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.author div .role {
+    font-size: 11px;
+}
+
+.burger-block {
+    height: 100%;
+    background: #313131;
+    width: 255px;
+    display: flex;
+}
+
+.mdc-top-app-bar {
+    box-shadow: 0 0 20px rgb(0 0 0 / 64%);
+}
